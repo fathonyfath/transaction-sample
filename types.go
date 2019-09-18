@@ -10,7 +10,7 @@ type PointDB struct {
 type TransactionDB struct {
 	ID       int32     `json:"id"`
 	DateTime time.Time `json:"date_time"`
-	Previous int64     `json:"previous"`
+	Previous *int64    `json:"previous"`
 	Change   int64     `json:"change"`
 	Final    int64     `json:"final"`
 }

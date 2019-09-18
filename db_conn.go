@@ -150,7 +150,7 @@ func insertTransaction(tx Transaction, ctx context.Context, previous int64, chan
 	return &TransactionDB{
 		ID:       int32(lastID),
 		DateTime: currentTime,
-		Previous: previous,
+		Previous: &previous,
 		Change:   change,
 		Final:    final,
 	}, nil
@@ -180,7 +180,7 @@ INSERT INTO transactions (` + "`previous_date`, `date`, `previous`, `change`, `f
 	return &TransactionDB{
 		ID:       int32(lastID),
 		DateTime: currentTime,
-		Previous: previous,
+		Previous: &previous,
 		Change:   change,
 		Final:    final,
 	}, nil
