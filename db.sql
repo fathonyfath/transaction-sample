@@ -64,7 +64,6 @@ USE `transaction_table`$$
 DROP TRIGGER IF EXISTS `transaction_table`.`transactions_BEFORE_INSERT` $$
 USE `transaction_table`$$
 CREATE
-DEFINER=`root`@`%`
 TRIGGER `transaction_table`.`transactions_BEFORE_INSERT`
 BEFORE INSERT ON `transaction_table`.`transactions`
 FOR EACH ROW
